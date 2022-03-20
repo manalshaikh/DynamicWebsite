@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CompanyWebsite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style5 {
+            height: 16px;
+        }
+        .auto-style8 {
+            height: 303px;
+            width: 110px;
+        }
+        .auto-style9 {
+            height: 303px;
+        }
+    </style>
+            <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/templatemo-main.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+    <div class="sequence">
+  
+      
+      
+    </div>
+    
+  
+        <nav>
+          <div class="logo">
+              <img src="img/logo.png" alt="">
+          </div>
+          <div class="mini-logo">
+              <img src="img/mini_logo.png" alt="">
+          </div>
+          <ul>
+            <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
+            <li><a href="#2"><i class="fa fa-user"></i> <em>About</em></a></li>
+            <li><a href="#5"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+          </ul>
+        </nav>
+        
+        <div class="slides">
+          <div class="slide" id="1">
+            <div class="content first-content">
+              <div class="container-fluid">
+                  <div class="col-md-3">
+                      <div class="author-image"><img src="img/author_image.png" alt="Author Image"></div>
+                  </div>
+                  <div class="col-md-9">
+                      <h2>Digital Future</h2>
+                      <p>You're one message away from us to fixing all your digital needs.</p>
+                      <div class="main-btn"><a href="#5">Contact us</a></div>
+                      <div class="fb-btn"><a rel="nofollow" href="https://fb.com/templatemo">Our FB Page</a></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" id="2">
+            <div class="content second-content">
+                <div class="container-fluid">
+                    <div class="col-md-6">
+                        <div class="left-content">
+                            <h2>About Us</h2>
+                            <p>We're a local taxing and GST invoicing company.</p> 
+                            <p>Are you running out of time to pay your GST due? No problem! We're going to help you out in no time. Contact us today to get your quote setup.</p>
+                            <p>We also do travel booking!</p>
+                          <div class="main-btn"><a href="#5">Read More</a></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right-image">
+                          <img src="img/about_image.jpg" alt="">
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          
+          <div class="slide" id="5">
+            <div class="content fifth-content">
+                <div class="container-fluid">
+                    <div class="col-md-6">
+                        <div id="map">
+    <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form id="form1" action="#5" method="post" runat="server">
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <fieldset>
+                                      <asp:TextBox ID="TextBox1" runat="server">Name</asp:TextBox>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                      <asp:TextBox ID="TextBox2" runat="server">Email</asp:TextBox>
+                                  </fieldset>
+                                </div>
+                                 <div class="col-md-12">
+                                  <fieldset>
+                                      <asp:TextBox ID="TextBox3" runat="server">Subject</asp:TextBox>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                      <asp:TextBox ID="TextBox4" runat="server">Message</asp:TextBox>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <%--<button type="submit" id="form-submit" class="btn">Send Now</button>--%>
+                                      <asp:Button ID="Button1" runat="server" Text="Send Now" OnClick="Button1_Click" />
+                                  </fieldset>
+                                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    
+</body>
+</html>
